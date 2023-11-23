@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".vista.MainActivity">
+
+    <TextView
+        android:id="@+id/lblCCAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Comunidad autónoma:"
+        android:textColor="@color/rojo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblProvincias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Provincias de:"
+        android:textColor="@color/azul"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/lvCCAA"
+        app:layout_constraintTop_toTopOf="@+id/lblCCAA" />
+
+    <ListView
+        android:id="@+id/lvCCAA"
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/rojo_fondo"
+        app:layout_constraintStart_toStartOf="@+id/lblCCAA"
+        app:layout_constraintTop_toBottomOf="@+id/lblCCAA">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/lvProvincias"
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/azul_fondo"
+        app:layout_constraintStart_toStartOf="@+id/lblProvincias"
+        app:layout_constraintTop_toBottomOf="@+id/lblProvincias">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
